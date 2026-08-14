@@ -303,3 +303,11 @@ html.js .reveal.in{opacity:1;transform:none}
 /* skeleton (while content loads) */
 .skeleton{color:transparent;background:linear-gradient(90deg,var(--surface-2),var(--surface),var(--surface-2));background-size:200% 100%;animation:sk 1.4s infinite;border-radius:8px}
 @keyframes sk{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+.logo-numa{border-radius:7px;object-fit:cover}
+
+/* Numa.9 EP blocks */
+.ep{margin-bottom:46px}
+.ep:last-child{margin-bottom:0}
+.eptracks{margin-top:22px}
+@media (max-width:720px){.eptracks{margin-top:16px}}

@@ -164,10 +164,12 @@
 
   function renderNuma(d) {
     var n = d.numa9, id = d.identity;
+    var eps = n.eps || [];
+    var heroCover = n.hero_cover || (eps[0] && eps[0].cover) || n.cover;
     q('numa-hero').innerHTML =
       '<div class="reveal">' +
         '<a class="back" href="index.html">' + ico('i-arrow') + ' Home</a>' +
-        '<div class="pill">' + esc(n.featured_kind) + '</div>' +
+        '<div class="pill">' + esc(n.hero_kind || 'Out now') + '</div>' +
         '<h1>Numa.9</h1>' +
         '<p class="lede">' + esc(n.tagline) + '</p>' +
         '<div class="subhero-cta">' +
@@ -175,22 +177,35 @@
           '<a class="btn btn-ghost" href="work.html">View the portfolio ' + ico('i-arrow') + '</a>' +
         '</div>' +
       '</div>' +
-      '<div class="subhero-portrait reveal d1" style="aspect-ratio:1"><img src="' + esc(n.cover) + '" alt="Fire on the Inside cover" style="object-position:center"></div>';
+      '<div class="subhero-portrait reveal d1" style="aspect-ratio:1"><img src="' + esc(heroCover) + '" alt="Numa.9 cover art" style="object-position:center"></div>';
 
-    q('numa-release').innerHTML =
-      '<a class="art" href="' + esc(n.spotify) + '" target="_blank" rel="noopener" aria-label="Play ' + esc(n.featured_title) + '">' +
-        '<img src="' + esc(n.cover) + '" alt="' + esc(n.featured_title) + '"><span class="play"><span>' + ico('i-play') + '</span></span></a>' +
-      '<div><div class="kind">' + esc(n.featured_kind) + '</div><h2>' + esc(n.featured_title) + '</h2>' +
-        '<div class="note">by Numa.9 · ' + esc(n.featured_note) + '</div>' +
-        '<div class="lyric">"' + esc(n.featured_lyric) + '"</div>' +
-        '<div class="streams">' + musicBtns(n, 'stream') + '</div></div>';
+    q('numa-release').innerHTML = eps.map(function (ep, ei) {
+      var art =
+        '<a class="art" href="' + esc(ep.link) + '" target="_blank" rel="noopener" aria-label="Open ' + esc(ep.title) + ' on Spotify">' +
+          '<img src="' + esc(ep.cover) + '" alt="' + esc(ep.title) + ' cover"><span class="play"><span>' + ico('i-play') + '</span></span></a>';
+      var head =
+        '<div class="release">' + art +
+          '<div><div class="kind">' + esc(ep.kind) + '</div><h2>' + esc(ep.title) + '</h2>' +
+            (has(ep.link) ? '<div class="streams"><a class="stream" href="' + esc(ep.link) + '" target="_blank" rel="noopener">' + ico('i-spotify') + ' Full EP on Spotify</a></div>' : '') +
+          '</div></div>';
+      var tracks = '<div class="catalogue eptracks">' + (ep.tracks || []).map(function (t, i) {
+        var num = ('0' + (i + 1)).slice(-2);
+        return '<a class="cat-row" href="' + esc(t.link) + '" target="_blank" rel="noopener">' +
+          '<span class="num">' + num + '</span><div class="ct"><div class="t">' + esc(t.title) + '</div></div>' +
+          '<span class="go">Play ' + ico('i-ext') + '</span></a>';
+      }).join('') + '</div>';
+      return '<div class="ep reveal' + (ei ? ' d1' : '') + '">' + head + tracks + '</div>';
+    }).join('');
 
-    q('numa-catalogue').innerHTML = '<div class="catalogue">' + (n.catalogue || []).map(function (c, i) {
-      var num = ('0' + (i + 1)).slice(-2);
-      return '<a class="cat-row reveal" href="' + esc(c.link) + '" target="_blank" rel="noopener">' +
-        '<span class="num">' + num + '</span><div class="ct"><div class="t">' + esc(c.title) + '</div><div class="k">' + esc(c.kind) + '</div></div>' +
-        '<span class="go">Open ' + ico('i-ext') + '</span></a>';
-    }).join('') + '</div>';
+    var vids = n.videos || [];
+    if (q('numa-catalogue')) q('numa-catalogue').innerHTML = vids.length
+      ? '<div class="catalogue">' + vids.map(function (c, i) {
+          var num = ('0' + (i + 1)).slice(-2);
+          return '<a class="cat-row reveal" href="' + esc(c.link) + '" target="_blank" rel="noopener">' +
+            '<span class="num">' + num + '</span><div class="ct"><div class="t">' + esc(c.title) + '</div><div class="k">Watch on YouTube</div></div>' +
+            '<span class="go">Open ' + ico('i-ext') + '</span></a>';
+        }).join('') + '</div>'
+      : '';
 
     q('numa-about').innerHTML = '<div class="prose reveal"><p>' + esc(n.about_1) + '</p><p>' + esc(n.about_2) + '</p></div>';
 

@@ -111,21 +111,33 @@ collections:
               - { label: "Tagline", name: "tagline", widget: "string" }
               - { label: "About paragraph 1", name: "about_1", widget: "text" }
               - { label: "About paragraph 2", name: "about_2", widget: "text" }
-              - { label: "EP Cover art", name: "cover", widget: "image", required: false }
-              - { label: "Featured title", name: "featured_title", widget: "string" }
-              - { label: "Featured kind (e.g. Debut EP · Out now)", name: "featured_kind", widget: "string" }
-              - { label: "Featured note (e.g. streams)", name: "featured_note", widget: "string" }
-              - { label: "Featured lyric line", name: "featured_lyric", widget: "string" }
-              - { label: "Spotify URL", name: "spotify", widget: "string", required: false }
+              - { label: "Hero pill (e.g. Two EPs out now · 2025)", name: "hero_kind", widget: "string", required: false }
+              - { label: "Hero cover art", name: "hero_cover", widget: "image", required: false }
+              - { label: "Spotify URL (artist)", name: "spotify", widget: "string", required: false }
               - { label: "YouTube URL", name: "youtube", widget: "string", required: false }
               - { label: "TikTok URL", name: "tiktok", widget: "string", required: false }
               - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
               - { label: "Apple Music URL", name: "apple", widget: "string", required: false }
-              - label: "Catalogue (tracks / videos)"
-                name: "catalogue"
+              - label: "EPs / Releases"
+                name: "eps"
                 widget: "list"
                 summary: "{{fields.title}}"
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Kind (e.g. Single, Watch on YouTube)", name: "kind", widget: "string" }
-                  - { label: "Link", name: "link", widget: "string" }
+                  - { label: "Kind (e.g. EP · 7 tracks · 2025)", name: "kind", widget: "string" }
+                  - { label: "Cover art", name: "cover", widget: "image", required: false }
+                  - { label: "Spotify album link", name: "link", widget: "string" }
+                  - label: "Tracks"
+                    name: "tracks"
+                    widget: "list"
+                    summary: "{{fields.title}}"
+                    fields:
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Link (Spotify track)", name: "link", widget: "string" }
+              - label: "Videos (Watch)"
+                name: "videos"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Link (YouTube)", name: "link", widget: "string" }
