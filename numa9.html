@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Numa.9</title>
+<meta name="description" content="Numa.9 is gospel music by Tobiloba Adedeji. African sound, worship, and stories of faith. Debut EP 'Fire on the Inside' out now.">
+<meta property="og:type" content="music.musician">
+<meta property="og:title" content="Numa.9">
+<meta property="og:description" content="Gospel music rooted in African sound, worship, and stories of faith.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23bd6a2b'/%3E%3Ctext y='.92em' x='30' font-size='60' font-family='Georgia,serif' fill='white'%3E9%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="numa9" class="page-music">
+
+  <nav class="nav" id="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html"><span class="mono">9</span> Numa.9</a>
+      <ul class="nav-links">
+        <li><a href="#release">The EP</a></li>
+        <li><a href="#catalogue">Catalogue</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="work.html">Portfolio</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle light or dark theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"/><line x1="18.4" y1="18.4" x2="19.8" y2="19.8"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.2" y1="19.8" x2="5.6" y2="18.4"/><line x1="18.4" y1="5.6" x2="19.8" y2="4.2"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+        </button>
+        <a class="btn btn-solid" href="#contact">Follow</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mm">
+    <div class="mm-in">
+      <a href="#release">The EP</a><a href="#catalogue">Catalogue</a><a href="#about">About</a>
+      <a href="work.html">Portfolio</a><a class="btn btn-solid" href="#contact">Follow</a>
+    </div>
+  </div>
+
+  <section class="subhero">
+    <div class="subhero-glow"></div>
+    <div class="container"><div class="subhero-in" id="numa-hero"><div class="skeleton" style="height:300px"></div></div></div>
+  </section>
+
+  <section class="section" id="release">
+    <div class="container">
+      <div class="sec-head"><span class="sec-tag">Out now</span><h2 class="sec-title">The debut EP</h2></div>
+      <div class="release" id="numa-release"></div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="catalogue">
+    <div class="container">
+      <div class="sec-head"><span class="sec-tag">Listen &amp; watch</span><h2 class="sec-title">Catalogue</h2></div>
+      <div id="numa-catalogue"></div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <div class="sec-head"><span class="sec-tag">About</span><h2 class="sec-title">About Numa.9</h2></div>
+      <div id="numa-about"></div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="sec-head"><span class="sec-tag">Stay close</span><h2 class="sec-title">Follow the journey</h2>
+        <p class="sec-sub">New songs, visuals and moments. Follow along on your platform of choice.</p></div>
+      <div class="contact-grid" id="contact-render"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container"><div class="footer-in">
+      <div class="fc">© <span id="yr"></span> <b>Numa.9</b> · a project by Tobiloba Adedeji</div>
+      <div class="fnav"><a href="index.html">Home</a><a href="work.html">Portfolio</a><a href="#release">Back to top</a></div>
+    </div></div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

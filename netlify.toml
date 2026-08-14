@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+
+# Redirect the Netlify Identity confirmation link into the CMS
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200

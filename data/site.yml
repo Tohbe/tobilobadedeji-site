@@ -1,0 +1,126 @@
+identity:
+  name: Tobiloba Adedeji
+  short_intro: >-
+    I'm Tobiloba Adedeji, a data analytics and operations professional based in
+    Lagos, Nigeria. I also create music as Numa.9. This site is home to both, so
+    choose where you would like to start.
+  photo: /images/uploads/pasport.png
+  location: Lagos, Nigeria
+  email: support@tobilobadedeji.com
+  whatsapp: "+234 803 322 9208"
+  linkedin: https://www.linkedin.com/in/tobilobadedeji
+  twitter: https://x.com/tobilobadedeji
+  substack: https://tobilobadedeji.substack.com
+  github: https://github.com/Tohbe
+  door_work: Dashboards, analytics projects, and the tools I work with.
+  door_music: Gospel music. Listen to the debut EP, Fire on the Inside.
+
+work:
+  headline: Data Analytics & Operations Professional
+  tagline: >-
+    Where data meets systems and decisions, building frameworks that help
+    institutions and people grow.
+  bio_1: >-
+    I work at the intersection of data, systems, and execution. With a
+    background in program and operations management, I transitioned into data
+    analytics after recognizing that the teams that move fastest and smartest
+    are the ones that see their data clearly and design systems intentionally.
+  bio_2: >-
+    My approach treats data not as a report card, but as a compass, helping
+    organizations ask better questions, allocate resources wisely, and act with
+    confidence.
+  domains:
+    - name: Higher Education
+    - name: Tech Startups
+    - name: HR Analytics
+    - name: Operations
+    - name: Business Simulations
+  tools:
+    - { name: Microsoft Excel, logo: /images/uploads/excel-logo.jpg, level: Advanced }
+    - { name: Power BI, logo: /images/uploads/power-bi-logo.jpg, level: Proficient }
+    - { name: SQL, logo: /images/uploads/sql-logo.png, level: Proficient }
+    - { name: Python, logo: /images/uploads/python-logo.jpg, level: Working }
+    - { name: Google Analytics, logo: /images/uploads/google-analytics.png, level: Proficient }
+    - { name: AI-Assisted Analysis, logo: /images/uploads/ai-logo.jpg, level: Proficient }
+  professional:
+    - name: Structured Thinking
+    - name: Stakeholder Engagement
+    - name: Power Query
+    - name: PivotTables
+    - name: Data Cleaning
+    - name: Google App Script
+    - name: Reporting & Visualization
+    - name: Data Modeling
+  projects:
+    - title: People Pulse (HR) Dashboard
+      description: >-
+        An interactive HR analytics solution designed to transform raw employee
+        data into clear, decision-ready insights. Built as a reusable Excel
+        template enabling HR professionals to quickly analyze workforce
+        composition, compensation patterns, and key people metrics.
+      image: /images/uploads/screenshot-14-.png
+      featured: true
+      link: ""
+      tools:
+        - { name: Excel }
+        - { name: Data Modeling }
+        - { name: Visualization }
+    - title: Sales Performance Analysis for Aurum Retail
+      description: >-
+        An interactive sales dashboard built for evidence-based business
+        strategy, surfacing total sales, profit trends, customer insights, and
+        top-performing products in a clean, decision-ready format.
+      image: /images/uploads/aurum.png
+      featured: true
+      link: ""
+      tools:
+        - { name: Excel }
+        - { name: Power BI }
+  experience:
+    - role: Process Manager
+      company: Docenti Global Business School
+      period: Jan 2026 – Present
+      location: Ikeja, Lagos
+      current: true
+    - role: Program Coordinator
+      company: Rome Business School Nigeria
+      period: Jan 2024 – Oct 2025
+      location: Lagos, Nigeria
+      current: false
+  education:
+    - degree: B.Sc. Political Science & Government
+      school: Federal University Oye-Ekiti
+      period: 2018 – 2023
+      note: >-
+        Foundation in systems analysis, policy, and human behavior, disciplines
+        that now inform my approach to data and operations.
+  certifications:
+    - { name: Google Data Analytics, issuer: Google / Coursera, logo: /images/uploads/google-logo.png }
+    - { name: Excel for Data Analytics & Visualization, issuer: Macquarie University, logo: /images/uploads/macquarie-logo.png }
+    - { name: Excel Skills for Business, issuer: Macquarie University, logo: /images/uploads/macquarie-logo.png }
+    - { name: McKinsey Forward Program, issuer: McKinsey.org, logo: /images/uploads/mckinsey-logo.png }
+    - { name: AI Workplace Proficiency, issuer: Superhuman AI, logo: /images/uploads/superhuman-logo.png }
+
+numa9:
+  tagline: Gospel music rooted in African sound, worship, and honest stories of faith.
+  about_1: >-
+    Numa.9 is a gospel music project rooted in African sound, cinematic
+    production, and worship. The songs are written to be simple, memorable, and
+    honest.
+  about_2: >-
+    The debut EP, Fire on the Inside, is out now on all major platforms, with
+    new music on the way.
+  cover: /images/uploads/fire-cover.jpg
+  featured_title: Fire on the Inside
+  featured_kind: Debut EP · Out now
+  featured_note: 1,000+ streams and growing
+  featured_lyric: I got fire on the inside, burning for your name.
+  spotify: https://open.spotify.com/artist/2D8Je3Hx3dRdMc1wF7ZEMT
+  youtube: https://youtube.com/@numa9.project
+  tiktok: https://tiktok.com/@numa9.project
+  instagram: https://instagram.com/numa9.project
+  apple: ""
+  catalogue:
+    - { title: Fire on the Inside, kind: EP title track, link: "https://open.spotify.com/artist/2D8Je3Hx3dRdMc1wF7ZEMT" }
+    - { title: Fire on the Inside (Lyric Video), kind: Watch on YouTube, link: "https://youtube.com/@numa9.project" }
+    - { title: Fire on the Inside (Visualizer), kind: Watch on YouTube, link: "https://youtube.com/@numa9.project" }

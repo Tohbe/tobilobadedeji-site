@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" role="img" aria-label="Tobiloba Adedeji">
+  <defs>
+    <linearGradient id="ta" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#345e94"/>
+      <stop offset="1" stop-color="#bd6a2b"/>
+    </linearGradient>
+  </defs>
+  <rect width="40" height="40" rx="10" fill="url(#ta)"/>
+  <g fill="#fff">
+    <rect x="9" y="10.6" width="22" height="4.3" rx="1.1"/>
+    <rect x="17.85" y="10.6" width="4.3" height="19.4" rx="1.1"/>
+    <rect x="14.4" y="27.4" width="11.2" height="2.9" rx="1.1"/>
+  </g>
+</svg>

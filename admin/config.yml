@@ -1,0 +1,131 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "site"
+    label: "Site Content"
+    files:
+      - label: "Everything"
+        name: "content"
+        file: "data/site.yml"
+        format: yaml
+        fields:
+
+          # ── IDENTITY (landing) ──────────────────────────────
+          - label: "Identity (Landing page)"
+            name: "identity"
+            widget: "object"
+            fields:
+              - { label: "Full Name", name: "name", widget: "string" }
+              - { label: "Short intro (landing paragraph)", name: "short_intro", widget: "text" }
+              - { label: "Profile Photo", name: "photo", widget: "image", required: false }
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Public Email", name: "email", widget: "string" }
+              - { label: "Phone / WhatsApp", name: "whatsapp", widget: "string", required: false }
+              - { label: "LinkedIn URL", name: "linkedin", widget: "string", required: false }
+              - { label: "X (Twitter) URL", name: "twitter", widget: "string", required: false }
+              - { label: "Substack URL", name: "substack", widget: "string", required: false }
+              - { label: "GitHub URL", name: "github", widget: "string", required: false }
+              - { label: "Work door caption", name: "door_work", widget: "string" }
+              - { label: "Music door caption", name: "door_music", widget: "string" }
+
+          # ── WORK ────────────────────────────────────────────
+          - label: "The Work (Portfolio)"
+            name: "work"
+            widget: "object"
+            fields:
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Tagline", name: "tagline", widget: "text" }
+              - { label: "About paragraph 1", name: "bio_1", widget: "text" }
+              - { label: "About paragraph 2", name: "bio_2", widget: "text" }
+              - label: "Domains / Tags"
+                name: "domains"
+                widget: "list"
+                summary: "{{fields.name}}"
+                fields: [ { label: "Name", name: "name", widget: "string" } ]
+              - label: "Tools"
+                name: "tools"
+                widget: "list"
+                summary: "{{fields.name}}"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Logo", name: "logo", widget: "image", required: false }
+                  - { label: "Proficiency", name: "level", widget: "select", options: ["Advanced", "Proficient", "Working", "Familiar"] }
+              - label: "Professional skills (tags)"
+                name: "professional"
+                widget: "list"
+                summary: "{{fields.name}}"
+                fields: [ { label: "Skill", name: "name", widget: "string" } ]
+              - label: "Projects"
+                name: "projects"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Featured", name: "featured", widget: "boolean", default: false }
+                  - { label: "Link (optional)", name: "link", widget: "string", required: false }
+                  - { label: "Image (screenshot)", name: "image", widget: "image", required: false }
+                  - label: "Tools used"
+                    name: "tools"
+                    widget: "list"
+                    summary: "{{fields.name}}"
+                    fields: [ { label: "Tool", name: "name", widget: "string" } ]
+              - label: "Experience"
+                name: "experience"
+                widget: "list"
+                summary: "{{fields.role}} · {{fields.company}}"
+                fields:
+                  - { label: "Role", name: "role", widget: "string" }
+                  - { label: "Company", name: "company", widget: "string" }
+                  - { label: "Period", name: "period", widget: "string" }
+                  - { label: "Location", name: "location", widget: "string" }
+                  - { label: "Current role", name: "current", widget: "boolean", default: false }
+              - label: "Education"
+                name: "education"
+                widget: "list"
+                summary: "{{fields.degree}}"
+                fields:
+                  - { label: "Degree", name: "degree", widget: "string" }
+                  - { label: "School", name: "school", widget: "string" }
+                  - { label: "Period", name: "period", widget: "string" }
+                  - { label: "Note (optional)", name: "note", widget: "text", required: false }
+              - label: "Certifications"
+                name: "certifications"
+                widget: "list"
+                summary: "{{fields.name}}"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Issuer", name: "issuer", widget: "string" }
+                  - { label: "Logo", name: "logo", widget: "image", required: false }
+
+          # ── NUMA.9 ──────────────────────────────────────────
+          - label: "Numa.9 (Music)"
+            name: "numa9"
+            widget: "object"
+            fields:
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "About paragraph 1", name: "about_1", widget: "text" }
+              - { label: "About paragraph 2", name: "about_2", widget: "text" }
+              - { label: "EP Cover art", name: "cover", widget: "image", required: false }
+              - { label: "Featured title", name: "featured_title", widget: "string" }
+              - { label: "Featured kind (e.g. Debut EP · Out now)", name: "featured_kind", widget: "string" }
+              - { label: "Featured note (e.g. streams)", name: "featured_note", widget: "string" }
+              - { label: "Featured lyric line", name: "featured_lyric", widget: "string" }
+              - { label: "Spotify URL", name: "spotify", widget: "string", required: false }
+              - { label: "YouTube URL", name: "youtube", widget: "string", required: false }
+              - { label: "TikTok URL", name: "tiktok", widget: "string", required: false }
+              - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
+              - { label: "Apple Music URL", name: "apple", widget: "string", required: false }
+              - label: "Catalogue (tracks / videos)"
+                name: "catalogue"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Kind (e.g. Single, Watch on YouTube)", name: "kind", widget: "string" }
+                  - { label: "Link", name: "link", widget: "string" }
