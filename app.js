@@ -69,6 +69,17 @@
       es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
     }, { threshold: .12, rootMargin: '0px 0px -6% 0px' });
     els.forEach(function (e) { io.observe(e); });
+    // Safety nets: never leave content hidden if the observer misfires (some
+    // mobile browsers don't fire for elements already in view at load).
+    function revealInView() {
+      document.querySelectorAll('.reveal:not(.in)').forEach(function (e) {
+        if (e.getBoundingClientRect().top < window.innerHeight * 1.15) e.classList.add('in');
+      });
+    }
+    setTimeout(revealInView, 400);
+    window.addEventListener('load', function () { setTimeout(revealInView, 200); });
+    // Absolute fallback: after 2.5s, show everything regardless.
+    setTimeout(function () { els.forEach(function (e) { e.classList.add('in'); }); }, 2500);
   }
 
   /* ---------- social buttons (only render filled links) ---------- */
