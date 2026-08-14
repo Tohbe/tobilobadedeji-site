@@ -61,5 +61,17 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
   <script src="app.js"></script>
+
+  <!-- Netlify Identity: catches invite / confirmation / recovery tokens and opens the password box -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', function (user) {
+        if (!user) {
+          window.netlifyIdentity.on('login', function () { document.location.href = '/admin/'; });
+        }
+      });
+    }
+  </script>
 </body>
 </html>
