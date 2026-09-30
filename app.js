@@ -74,8 +74,8 @@
       { key: 'spotify',       name: 'Spotify',       icon: 'i-spotify',     brand: '#1DB954', search: function (q) { return 'https://open.spotify.com/search/' + q; } },
       { key: 'apple',         name: 'Apple Music',   icon: 'i-applemusic',  brand: '#FA2D48', search: function (q) { return 'https://music.apple.com/search?term=' + q; } },
       { key: 'youtube_music', name: 'YouTube Music', icon: 'i-ytmusic',     brand: '#FF0000', search: function (q) { return 'https://music.youtube.com/search?q=' + q; } },
-      { key: 'audiomack',     name: 'Audiomack',     icon: 'i-audiomack',   brand: '#FFA200', search: function (q) { return 'https://audiomack.com/search?q=' + q; } },
-      { key: 'boomplay',      name: 'Boomplay',      icon: 'i-boomplay',    brand: '#F1352B', search: function (q) { return 'https://www.boomplay.com/search/' + q; } },
+      { key: 'audiomack',     name: 'Audiomack',     icon: 'i-audiomack',   brand: '#FFA200', artistFallback: true, search: function (q) { return 'https://audiomack.com/search?q=' + q; } },
+      { key: 'boomplay',      name: 'Boomplay',      icon: 'i-boomplay',    brand: '#F1352B', artistFallback: true, search: function (q) { return 'https://www.boomplay.com/search/' + q; } },
       { key: 'youtube',       name: 'YouTube',       icon: 'i-youtube',     brand: '#FF0000', search: function (q) { return 'https://www.youtube.com/results?search_query=' + q; } },
       { key: 'amazon',        name: 'Amazon Music',  icon: 'i-amazonmusic', brand: '#25D1DA', search: function (q) { return 'https://music.amazon.com/search/' + q; } },
       { key: 'tidal',         name: 'Tidal',         icon: 'i-tidal',       brand: '',        search: function (q) { return 'https://tidal.com/search?q=' + q; } },
@@ -84,10 +84,12 @@
     var byKey = {}; SERVICES.forEach(function (s) { byKey[s.key] = s; });
 
     var items = [];        // registry: render pushes items, DOM references them by index
+    var artistLinks = {};  // artist-level profile links, used as a fallback for some services
     var current = null;    // open dialog element
     var lastFocus = null;
 
     function register(item) { items.push(item); return items.length - 1; }
+    function setArtistLinks(map) { artistLinks = map || {}; }
     function svc(k) { return byKey[k] || null; }
     function getPref() { try { return localStorage.getItem(PREF_KEY) || ''; } catch (e) { return ''; } }
     function setPref(k) { try { localStorage.setItem(PREF_KEY, k); } catch (e) {} }
@@ -99,6 +101,9 @@
       if (has(links[s.key])) return { url: links[s.key], exact: true };
       if (s.key === 'spotify' && has(item.spotify)) return { url: item.spotify, exact: true };
       if (s.key === 'youtube' && has(item.youtube)) return { url: item.youtube, exact: true };
+      // Some services (Audiomack, Boomplay) have no per-song link and weak
+      // in-app search, so send any click to the artist profile instead.
+      if (s.artistFallback && has(artistLinks[s.key])) return { url: artistLinks[s.key], exact: false, viaArtist: true };
       return { url: s.search(enc(item.query)), exact: false };
     }
 
@@ -252,7 +257,8 @@
 
     return {
       register: register, open: open, wire: wire, bestFallback: bestFallback,
-      pref: getPref, svc: svc, reset: function () { items = []; }
+      setArtistLinks: setArtistLinks,
+      pref: getPref, svc: svc, reset: function () { items = []; artistLinks = {}; }
     };
   })();
 
@@ -401,6 +407,7 @@
     ['apple', 'youtube_music', 'amazon', 'tidal', 'deezer', 'soundcloud', 'audiomack', 'boomplay'].forEach(function (k) { if (has(np[k])) artistLinks[k] = np[k]; });
     if (has(n.apple)) artistLinks.apple = n.apple;
     if (has(n.youtube)) artistLinks.youtube = n.youtube;
+    Listen.setArtistLinks(artistLinks);
     var artistIdx = Listen.register({ type: 'artist', title: 'Numa.9', query: 'Numa.9', cover: heroCover, spotify: n.spotify, youtube: n.youtube, links: artistLinks });
 
     var pref = Listen.pref(), prefSvc = Listen.svc(pref);
