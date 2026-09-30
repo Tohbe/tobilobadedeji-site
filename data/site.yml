@@ -109,19 +109,33 @@ numa9:
     African rhythm with contemporary soul, choir harmonies, and intimate vocals.
   about_2: >-
     Two EPs are out now, Fire on the Inside and Echoes of Zion, both released in
-    2025 on Spotify and YouTube, with new music on the way.
+    2025 and streaming on every major platform, with new music on the way.
   hero_kind: Two EPs out now · 2025
   hero_cover: /images/uploads/echoes-cover.jpg
   spotify: https://open.spotify.com/artist/2D8Je3Hx3dRdMc1wF7ZEMT
   youtube: https://youtube.com/@numa9.project
   tiktok: https://tiktok.com/@numa9.project
   instagram: https://instagram.com/numa9.project
-  apple: ""
+  apple: https://music.apple.com/us/artist/tobiloba-adedeji/1845743795
+  # Optional artist-profile links on other services. Leave blank and the
+  # site sends listeners to a scoped search on that platform instead.
+  platforms:
+    apple: https://music.apple.com/us/artist/tobiloba-adedeji/1845743795
+    youtube_music: https://music.youtube.com/channel/UCQa4gAS1X535c5rOJyfh1dQ
+    audiomack: https://audiomack.com/numa9
+    boomplay: https://www.boomplay.com/artists/EQKxhGVYShG3YK2pKTH39B3b
+    amazon: ""
+    tidal: https://tidal.com/artist/69897769
+    deezer: https://www.deezer.com/artist/356506102
+    soundcloud: ""
   eps:
     - title: Echoes of Zion
       kind: EP · 7 tracks · 2025
       cover: /images/uploads/echoes-cover.jpg
       link: https://open.spotify.com/album/6WoQuqGHdvbaheeFMC4BFv
+      platforms:
+        apple: https://music.apple.com/us/album/echoes-of-zion/1846370810
+        amazon: https://music.amazon.com/albums/B0FVWYCWKC
       tracks:
         - { title: Intro (The Call), link: https://open.spotify.com/track/7AfZ7YQfhm1mekDtUrHFf3 }
         - { title: Zion Speaks, link: https://open.spotify.com/track/7ryw5ypiltPZLvFesKbsxo }
@@ -134,6 +148,9 @@ numa9:
       kind: Debut EP · 8 tracks · 2025
       cover: /images/uploads/fire-cover.jpg
       link: https://open.spotify.com/album/6tWkUaLj8kKpfvzmnsG9ZU
+      platforms:
+        apple: https://music.apple.com/us/album/fire-on-the-inside/1846354222
+        amazon: https://music.amazon.com/albums/B0FV99G4SB
       tracks:
         - { title: Intro (The Ember), link: https://open.spotify.com/track/6ZDHXRSiUtDJ5m2PkEIfag }
         - { title: Breathe on Me, link: https://open.spotify.com/track/7FXqZlDyxzQLdswo3RdnLy }
