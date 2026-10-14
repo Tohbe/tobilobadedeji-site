@@ -373,6 +373,55 @@
         '<div class="body"><h3>' + esc(p.title) + '</h3><p>' + esc(p.description) + '</p><div class="ptools">' + tools + '</div></div>' + link + '</div>';
     }).join('') + '</div>';
 
+    var pubs = w.publications || [];
+    var pubWrap = q('work-pubs');
+    if (pubWrap) {
+      pubWrap.closest('section').style.display = pubs.length ? '' : 'none';
+      pubWrap.innerHTML = '<div class="pub-grid">' + pubs.map(function (p, i) {
+        var hasBody = has(p.body);
+        var readMin = hasBody ? Math.max(1, Math.round(String(p.body).replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length / 220)) : 0;
+        var meta = [];
+        if (has(p.date)) meta.push(esc(p.date));
+        if (readMin) meta.push(readMin + ' min read');
+        var links = [
+          has(p.substack) ? '<a class="pub-link" href="' + esc(p.substack) + '" target="_blank" rel="noopener">Read on Substack ' + ico('i-arrow') + '</a>' : '',
+          has(p.medium) ? '<a class="pub-link" href="' + esc(p.medium) + '" target="_blank" rel="noopener">Read on Medium ' + ico('i-arrow') + '</a>' : ''
+        ].filter(Boolean).join('');
+        var reader = hasBody
+          ? '<div class="article-wrap" hidden><div class="article">' + p.body + '</div>' +
+            '<button class="pub-collapse" type="button">Collapse article ' + ico('i-arrow') + '</button></div>'
+          : '';
+        return '<article class="pub reveal' + (i % 2 ? ' d1' : '') + (hasBody ? ' has-article' : '') + '">' +
+          (meta.length ? '<div class="pub-meta">' + meta.join('<span class="pub-dot">·</span>') + '</div>' : '') +
+          '<h3>' + esc(p.title) + '</h3>' +
+          (has(p.subtitle) ? '<div class="pub-sub">' + esc(p.subtitle) + '</div>' : '') +
+          (has(p.excerpt) ? '<p class="pub-ex">' + esc(p.excerpt) + '</p>' : '') +
+          '<div class="pub-links">' +
+            (hasBody ? '<button class="pub-link pub-toggle" type="button" aria-expanded="false">Read article ' + ico('i-arrow') + '</button>' : '') +
+            links +
+          '</div>' + reader +
+          '</article>';
+      }).join('') + '</div>';
+
+      pubWrap.querySelectorAll('.pub').forEach(function (card) {
+        var toggle = card.querySelector('.pub-toggle');
+        var wrap = card.querySelector('.article-wrap');
+        if (!toggle || !wrap) return;
+        function setOpen(open) {
+          wrap.hidden = !open;
+          card.classList.toggle('open', open);
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+          toggle.firstChild.textContent = open ? 'Hide article ' : 'Read article ';
+        }
+        toggle.addEventListener('click', function () { setOpen(wrap.hidden); });
+        var collapse = card.querySelector('.pub-collapse');
+        if (collapse) collapse.addEventListener('click', function () {
+          setOpen(false);
+          card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    }
+
     q('work-exp').innerHTML =
       '<div class="reveal"><div class="blk-h">Experience</div><div class="timeline">' +
         (w.experience || []).map(function (e) {

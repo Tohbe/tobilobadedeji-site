@@ -75,6 +75,23 @@ collections:
                     widget: "list"
                     summary: "{{fields.name}}"
                     fields: [ { label: "Tool", name: "name", widget: "string" } ]
+              - label: "Publications / Writing"
+                name: "publications"
+                widget: "list"
+                required: false
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Subtitle / deck", name: "subtitle", widget: "string", required: false }
+                  - { label: "Excerpt / pull quote", name: "excerpt", widget: "text", required: false }
+                  - { label: "Date (e.g. March 2026)", name: "date", widget: "string", required: false }
+                  - { label: "Substack URL", name: "substack", widget: "string", required: false }
+                  - { label: "Medium URL", name: "medium", widget: "string", required: false }
+                  - label: "Full article (HTML)"
+                    name: "body"
+                    widget: "text"
+                    required: false
+                    hint: "Optional. Paste the article as clean HTML (h2/h3, p, blockquote, ul/li). Shown in the expand/collapse reader on the page. Leave blank to show only the Substack/Medium links."
               - label: "Experience"
                 name: "experience"
                 widget: "list"

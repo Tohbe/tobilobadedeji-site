@@ -91,6 +91,102 @@ work:
       tools:
         - name: Excel
         - name: Power BI
+  publications:
+    - title: Teleported Into Tomorrow
+      subtitle: AI, Learning, and What It Means for Nigerian Professionals
+      excerpt: We are living through the fastest technological transition in
+        human history.
+      date: March 2026
+      substack: https://tobilobadedeji.substack.com/p/teleported-into-tomorrow
+      medium: https://medium.com/@tobbyflashy/teleported-into-tomorrow-f38711cf40d7
+      body: |
+        <blockquote><p>"Modern humans have lived approximately 300,000 years. The entire lifespan of digital computers is roughly 80 years. If human existence were one full day, digital computers would appear at 11:59:59 PM."</p>
+        </blockquote>
+        <h2>The Core Argument</h2>
+        <p>We are living through the fastest technological transition in human history. AI is not arriving gradually. It is compounding, and the gap between what AI can do and what most professionals are prepared for is widening every few months.</p>
+        <p>For Nigerian professionals, this moment carries a specific urgency. The question is no longer whether to engage with AI. It is about engaging on the right terms: building the depth of judgment that tools cannot replace, while using AI to amplify output.</p>
+        <p>Those who do both will thrive. Those who do only one will struggle.</p>
+        <h2>How We Got Here: 80 Years in One Breath</h2>
+        <h3>The Infrastructure Era (2005 to 2019)</h3>
+        <p>Before AI took centre stage, the world spent two decades building the infrastructure it would run on. Web 2.0 turned the internet from a reading medium into a participation platform. The iPhone moved digital access from desks to pockets. Cloud computing let companies rent computing power instead of owning hardware. The platform economy reframed value from ownership to orchestration.</p>
+        <p>All of this generated something critical: data. Hundreds of billions of clicks, searches, transactions, and GPS coordinates accumulated into the raw material AI would later be trained on.</p>
+        <p>Early machine learning existed during this period, but it was narrow. Systems followed logic. They did exactly what humans programmed them to do, nothing more.</p>
+        <h3>The AI Era (2020 to Now)</h3>
+        <p>The shift came in phases. Rule-based systems gave way to statistical learning. Statistical learning gave way to deep learning. Deep learning gave way to generative AI.</p>
+        <p>Each phase narrowed the gap between machine capability and human cognition. By the 2020s, systems like ChatGPT and Claude had moved from pattern-matching to reasoning, synthesis, and multi-step problem-solving. Software stopped being something you operate and became something you collaborate with.</p>
+        <h2>The Acceleration Has Not Slowed Down</h2>
+        <p>This is the part most people have not fully absorbed.</p>
+        <p>AI capabilities are not improving linearly. They are accelerating exponentially. Research from the Model Evaluation and Threat Research (METR) group found that frontier AI's ability to handle long, complex tasks has been doubling approximately every seven months since 2019.</p>
+        <p>In April 2024, the pace nearly doubled again. On the Epoch Capabilities Index, frontier models now match human performance on tasks that would take a skilled professional roughly 50 minutes. On software engineering benchmarks, AI went from solving 4.4% of complex coding problems in 2023 to 71.7% in 2024, a leap of 67 percentage points in a single year.</p>
+        <p>Business adoption has followed. In 2024, 78% of organisations reported using AI, up from 55% the year before. The cost of running AI at GPT-3.5 capability dropped more than 280-fold between 2022 and 2024.</p>
+        <p>Training compute now doubles every five months. Training datasets double every eight months. This is not incremental progress. It is compounding transformation.</p>
+        <h2>The Mastery Paradox: When the Target Moves Faster Than the Runner</h2>
+        <h3>How Mastery Has Always Worked</h3>
+        <p>For most of human history, the relationship between effort and expertise was stable. Anders Ericsson's foundational research established that true mastery in any domain requires roughly 10,000 hours of deliberate practice, or five to seven years of focused work. Even more modest estimates suggest that professional-level performance in a new field takes two to three years.</p>
+        <p>That timeline has held across disciplines and across generations. Until now.</p>
+        <h3>The Compression Effect</h3>
+        <p>When major AI capability leaps occur every three to six months, the traditional arc of skill-building collapses. By the time a professional learns a tool, builds competence, and reaches proficiency, the tool has already rewritten its interface, absorbed parts of the skill, and lowered the entry bar for the next person.</p>
+        <blockquote><p>If mastering a skill is a long-distance marathon, AI evolution is teleportation points appearing mid-race.</p>
+        </blockquote>
+        <p>A data analyst who spent three years mastering Excel-based financial modelling in 2022 now competes with AI systems that replicate many of those outputs in seconds. A junior copywriter who honed SEO craft over two years now works alongside generative AI producing acceptable first drafts at industrial scale. A software developer with five years of experience on a specific stack may find AI agents completing comparable tasks autonomously.</p>
+        <p>This is not an argument that skills are worthless. It is a precise observation about what mastery now means, and how quickly that definition is shifting.</p>
+        <h3>The Hidden Cost: AI Can Quietly Undermine Depth</h3>
+        <p>There is a deeper complication that recent research has surfaced. A 2026 study by Anthropic researchers Shen and Tamkin found that professional developers who used AI assistance scored 17% lower on competency assessments than those who worked without it, with no meaningful speed advantage gained. Debugging skills declined most sharply, which is precisely the skill most needed to supervise and validate AI output.</p>
+        <p>The researchers identified why: skill formation depends on encountering errors and resolving them independently. AI gives good answers, but good answers accepted without friction bypass the productive struggle where learning actually happens.</p>
+        <p>This creates a serious paradox for early-career professionals. The tool that promises to accelerate their output may quietly hollow out their depth. Junior professionals who prioritise AI-assisted speed over foundational cognitive engagement may find, years later, that they cannot evaluate the very outputs they have been relying on.</p>
+        <blockquote><p>If AI is a tide, those with no foundation are not lifted. They are swept.</p>
+        </blockquote>
+        <h2>Nigeria and Africa: Where the Stakes Are Highest</h2>
+        <h3>The Scale of the Shift</h3>
+        <p>The World Economic Forum's Future of Jobs Report 2025 projects that AI will reshape 39% of global core job skills by 2030. For Nigeria specifically, a Fidelity Bank executive citing WEF estimates placed that figure at 40%. AI could unlock an additional $50 billion in economic value for Nigeria by 2035.</p>
+        <p>A 2025 report by Intreensic warned that a widening digital skills gap across Africa threatens to displace 230 million jobs by 2030. The WEF already ranks AI and machine learning specialists, data analysts, fintech engineers, and DevOps engineers among the fastest-growing roles, while bank tellers, executive secretaries, data entry operators, and clerks are projected to decline sharply.</p>
+        <h3>What Is Already Happening in Nigerian Banking</h3>
+        <p>Nigeria's financial sector is the clearest early signal. By early 2024, thirteen deposit money banks had integrated AI-powered chatbots into customer service. UBA's LEO and Zenith Bank's ZiVa handle queries that once required human call centre agents, available across all digital channels simultaneously, without rest or shift allowances.</p>
+        <p>As AI expands into fraud detection, credit risk scoring, and financial advisory through robo-platforms, demand for entry-level positions is declining structurally. At the same time, those same banks are hiring AI trainers, data governance specialists, prompt engineers, and AI ethics reviewers.</p>
+        <p>In March 2026, the Chartered Institute of Bankers of Nigeria urged newly inducted bankers to harness AI for innovation, explicitly acknowledging that AI has already transformed credit risk modelling, fraud detection, and customer analytics worldwide.</p>
+        <h3>The Structural Challenges Are Real</h3>
+        <p>Nigeria faces this inflection point with genuine constraints. Broadband penetration sits at 48.15%. High data costs and unstable electricity limit access to essential digital tools. The Lagos Business School's AI in Nigeria White Paper (2025) identified a shortage of skilled AI professionals and persistent brain drain as critical barriers. Sixty-five percent of employers surveyed cited digital illiteracy among graduates as a key employment barrier.</p>
+        <h3>The Reasons for Optimism</h3>
+        <p>The picture is not uniformly bleak. Nigeria climbed 31 places in the Oxford Government AI Readiness Index 2025, moving from 103rd to 72nd globally, driven by gains in Policy Capacity and Development and Diffusion. The government's 3MTT initiative (3 Million Technical Talent programme) and the AINSI Phase 2 AI skills programme represent concrete pipeline investments.</p>
+        <p>Perhaps most significantly, roughly 70% of Nigeria's population is under 30. A young, connected demographic is a genuine advantage in a world where adaptability matters more than legacy credentials.</p>
+        <p>But demographic advantage is not destiny. The WEF notes that only 9% of young people across Sub-Saharan Africa are enrolled in technical or vocational programmes. Ambition without execution leaves opportunity on the table.</p>
+        <h2>What Actually Matters Now: The New Mastery Stack</h2>
+        <p>The compression effect does not make skills irrelevant. It changes what mastery means, permanently.</p>
+        <p>Old mastery: knowing how to do the work.</p>
+        <p>New mastery: knowing how to direct, evaluate, and validate AI doing the work.</p>
+        <h4>The professionals who thrive in this era will build four things:</h4>
+        <p class="epi">Layer 1</p>
+        <ul><li><p>Judgment</p>
+        </li>
+        </ul>
+        <p>Knowing what good looks like, independent of the tool that produced it</p>
+        <p class="epi">Layer 2</p>
+        <ul><li><p>Systems Thinking</p>
+        </li>
+        </ul>
+        <p>Designing workflows across tools, connecting outputs to meaningful outcomes</p>
+        <p class="epi">Layer 3</p>
+        <ul><li><p>Prompting and Instruction Design</p>
+        </li>
+        </ul>
+        <p>Communicating intent clearly enough for AI to act on it faithfully</p>
+        <p class="epi">Layer 4</p>
+        <ul><li><p>Domain Context</p>
+        </li>
+        </ul>
+        <p>Understanding the problem space deeply enough to catch errors, spot gaps, and direct intelligently</p>
+        <p>Notice what all four have in common: they require human depth. They cannot be delegated to AI without the human first developing enough mastery to evaluate what comes back. The Anthropic study's warning is not that AI is harmful. It is that outsourcing cognition before building cognition is a trap.</p>
+        <p>Education researchers at the Learning Policy Institute and Area9 Lyceum made a similar argument in a 2025 book on mastery: the primary goal of education must shift from information retention, which AI does better than any human, toward critical thinking, creativity, effective collaboration, and the ability to apply knowledge when the context shifts.</p>
+        <p>For Nigerian professionals, the WEF's Future of Jobs Report is direct: the fastest-growing skill demands in the country include AI literacy, big data competence, cybersecurity knowledge, and, crucially, adaptability, resilience, and creative thinking. These are not contradictory demands. They point in the same direction: technical fluency combined with irreducibly human judgment.</p>
+        <h2>The Strategic Moment</h2>
+        <p>The past 20 years built the stage. Networks, data, platforms, and behavioural infrastructure were all assembled first. AI did not arrive suddenly. It arrived into a world that was already wired, documented, and waiting. What feels like an explosion is actually a culmination.</p>
+        <p>For Nigerian and African professionals, the question is no longer whether to engage with AI. That decision has already been made for everyone. The question is: on what terms?</p>
+        <p>The professionals who thrive will not simply be those who adopted AI earliest. They will be those who used tools to deliver results while simultaneously investing in the depth that tools cannot replicate: the judgment to evaluate AI's outputs, the domain expertise to catch its mistakes, the systems thinking to build workflows that compound over time, and the ethical clarity to ask not just whether AI can do this, but whether it should.</p>
+        <blockquote><p>AI's time horizon doubles every seven months. Human wisdom does not. That asymmetry is not a reason for panic. It is a call to invest in the things that compound on the human side.</p>
+        </blockquote>
+        <p>We were teleported into the digital age. The question for this generation is whether we land with our footing intact.</p>
+        <h3>Key Sources</h3>
+        <p>METR Group (2025) | Epoch AI Capabilities Index (2025) | Stanford AI Index Report 2025 | WEF Future of Jobs Report 2025 | Anthropic / Shen & Tamkin (2026) | Oxford Government AI Readiness Index 2025 | Lagos Business School AI in Nigeria White Paper (2025)</p>
   bio_1: I work at the intersection of data, systems, and execution. With a
     background in program and operations management, I transitioned into data
     analytics after recognizing that the teams that move fastest and smartest
